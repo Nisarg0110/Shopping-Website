@@ -54,39 +54,10 @@ setInterval(function(){
 }, 3000)
 
 
-
-// card detail
-// shopCard.forEach(function(shop){
-//     shop.addEventListener("click", function(){
-//         console.log(shop);
-
-//         let div = document.createElement("div");
-//         div.classList.add("cardDetail");
-//         div.innerHTML=`
-//         <i id="icon" class="fa-solid fa-xmark"></i>
-//         <img src=${shop.firstElementChild.src} alt="">
-//         <div>
-//             <p class="heads">Best At Shopping Cart</p><br>
-//             <p>Size</p>
-//             <input type="number" placeholder="Select"> <br>
-//             <p>Quality</p>
-//             <input type="number"> <br>
-//             <button>Add To Cart</button>
-
-//         </div>
-//         `
-//         document.querySelector("body").appendChild(div);
-//         document.getElementById("icon").addEventListener("click", function(){
-//             div.remove();
-//         })
-//     })
-// })
-
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.querySelector('.auth-form.login');
     const signupForm = document.querySelector('.auth-form.signup');
 
-    // Simple signup logic
     if (signupForm) {
         signupForm.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -103,12 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 users.push({ username, email, password });
                 localStorage.setItem('users', JSON.stringify(users));
                 alert('Signup successful!');
-                window.location.href = 'login.html'; // Redirect to login page after signup
+                window.location.href = 'login.html';
             }
         });
     }
 
-    // Simple login logic
     if (loginForm) {
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -121,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (user) {
                 alert('Login successful!');
                 // Set user session or token here
-                window.location.href = 'index.html'; // Redirect to the main page after login
+                window.location.href = 'index.html';
             } else {
                 alert('Invalid email or password!');
             }
