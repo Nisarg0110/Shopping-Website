@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/addtocart/">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">     
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#trend">Trends</a></li>
+                <li><a href="#blog">Blogs</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+                {{!-- <a href="/cart">Cart</a> --}}
+                {{!-- <button onclick="window.location.href='./login'">Login</button>
+                <button onclick="window.location.href='./signup'">Sign Up</button> --}}
+                {{!-- <button onclick="window.location.href='./addtocart'">Cart</button> --}}
+                
+            </div>
+            <a href="/cart"><i class="fa-solid fa-cart-shopping"><span style="margin-right : 1rem;" id="total_number_cart">0</span></i></a>
+        </nav>
+        <div class="main">
+            <div class="mainText">
+                <h1>Find Best At <br> Shopping Cart</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit Vitae quos accusamus <br> deserunt tempora a facere inventore <br> ut corrupti fugiat! Nihil, numquam natus.</p>
+                <button>Explore</button>
+            </div>
+            <img src="/assets/mainlogo.png" alt="">
+        </div>
+
+        <div id="shop">
+            <div class="head">
+                <h1>Shop Now</h1>
+            </div>
+            <div class="shop">
+                <div class="shopCard">
+                    <img src="/assets/ts1.webp" alt="">
+                    <button class="add-to-cart" data-product-id="1" onclick='add_to_cart("1","/assets/ts6.webp","F-Tshirt",500)'>Add to Cart</button>
+                    <p>Price : 500</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+                <div class="shopCard">
+                    <img src="/assets/ts2.jpeg" alt="">
+                    <button class="add-to-cart" data-product-id="2" onclick='add_to_cart("2","/assets/ts6.webp","F-Tshirt",1000)'>Add to Cart</button>
+                    <p>Price : 1000</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+                <div class="shopCard">
+                    <img src="/assets/ts3.jpeg" alt="">
+                    <button class="add-to-cart" data-product-id="3" onclick='add_to_cart("3","/assets/ts6.webp","F-Tshirt",700)'>Add to Cart</button>
+                    <p>Price : 700</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+                <div class="shopCard">
+                    <img src="/assets/ts4.jpeg" alt="">
+                    <button class="add-to-cart" data-product-id="4" onclick='add_to_cart("4","/assets/ts6.webp","F-Tshirt",500)'>Add to Cart</button>
+                    <p>Price : 500</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+                <div class="shopCard">
+                    <img src="/assets/ts5.webp" alt="">
+                    <button class="add-to-cart" data-product-id="5" onclick='add_to_cart("5","/assets/ts6.webp","F-Tshirt",200)'>Add to Cart</button>
+                    <p>Price : 200</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+                <div class="shopCard">
+                    <img src="/assets/ts6.webp" alt="">
+                    <button class="add-to-cart" data-product-id="6" onclick='add_to_cart("6","/assets/ts6.webp","F-Tshirt",300)'>Add to Cart</button>
+                    <p>Price : 300</p>
+                    {{!-- <p>Best At ShoppingCart</p> --}}
+                </div>
+            </div>
+        </div> 
+        {{!-- <div id="shop" class="shop"></div> --}}
+
+        <div id="trend">
+            <div class="head">
+                <h1>Trends At ShoppingCart</h1>
+            </div>
+            <div class="trend">
+                <div class="trendCard">
+                    <img src="/assets/td1.webp" alt="">
+                    <img src="/assets/td2.webp" alt="">
+                    <img src="/assets/td3.webp" alt="">
+                </div>/ecom/public/assests/
+                <div class="trendCard">
+                    <img src="/assets/td4.webp" alt="">
+                    <img src="/assets/td5.webp" alt="">
+                    <img src="/assets/td6.webp" alt="">
+                </div>
+                <div class="trendCard">
+                    <img src="/assets/td7.webp" alt="">
+                    <img src="/assets/td8.webp" alt="">
+                    <img src="/assets/td9.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="blog">
+            <div class="head">
+                <h1>Read Blogs</h1>
+            </div>
+            <div class="blog">
+                <div class="blogCard">
+                    <img src="/assets/b1.png" alt="">
+                    <p>Best At Shopping</p>
+                    <a href="https://www.hellofashionblog.com/">Read More</a>
+                </div>
+                <div class="blogCard">
+                    <img src="/assets/b2.png" alt="">
+                    <p>Best At Shopping</p>
+                    <a href="https://www.hellofashionblog.com/">Read More</a>
+                </div>
+                <div class="blogCard">
+                    <img src="/assets/b3.png" alt="">
+                    <p>Best At Shopping</p>
+                    <a href="https://www.hellofashionblog.com/">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="text">
+                <h2>Abouts</h2>
+                <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Dignissimos ipsa minus eaque <br> ipsum incidunt obcaecati <br> beatae dolorem quas <br> deserunt odit a voluptatum <br> saepe sint ad impedit. <br> Repellendus, ex sapiente?</p>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="text">
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Dignissimos ipsa minus eaque <br> ipsum incidunt obcaecati <br> beatae dolorem quas <br> deserunt odit a voluptatum <br> saepe sint ad impedit. <br> Repellendus, ex sapiente?</p>
+            </div>
+        </div>
+    </div>
+    {{!-- <script src="/js/data.js"></script> --}}
+    {{!-- <script src="/js/script.js"></script> --}}
+    <script src="/js/main.js"></script>
+</body>
+</html>
+
