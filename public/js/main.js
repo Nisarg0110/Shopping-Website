@@ -54,50 +54,80 @@ setInterval(function(){
 }, 3000)
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.querySelector('.auth-form.login');
-    const signupForm = document.querySelector('.auth-form.signup');
 
-    if (signupForm) {
-        signupForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const username = signupForm.querySelector('#username').value;
-            const email = signupForm.querySelector('#email').value;
-            const password = signupForm.querySelector('#password').value;
+// card detail
+// shopCard.forEach(function(shop){
+//     shop.addEventListener("click", function(){
+//         console.log(shop);
 
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            const userExists = users.some(user => user.email === email);
+//         let div = document.createElement("div");
+//         div.classList.add("cardDetail");
+//         div.innerHTML=`
+//         <i id="icon" class="fa-solid fa-xmark"></i>
+//         <img src=${shop.firstElementChild.src} alt="">
+//         <div>
+//             <p class="heads">Best At Shopping Cart</p><br>
+//             <p>Size</p>
+//             <input type="number" placeholder="Select"> <br>
+//             <p>Quality</p>
+//             <input type="number"> <br>
+//             <button>Add To Cart</button>
 
-            if (userExists) {
-                alert('User already exists!');
-            } else {
-                users.push({ username, email, password });
-                localStorage.setItem('users', JSON.stringify(users));
-                alert('Signup successful!');
-                window.location.href = 'login.html';
-            }
-        });
-    }
+//         </div>
+//         `
+//         document.querySelector("body").appendChild(div);
+//         document.getElementById("icon").addEventListener("click", function(){
+//             div.remove();
+//         })
+//     })
+// })
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const email = loginForm.querySelector('#email').value;
-            const password = loginForm.querySelector('#password').value;
+// document.addEventListener('DOMContentLoaded', function () {
+//     const loginForm = document.querySelector('.auth-form.login');
+//     const signupForm = document.querySelector('.auth-form.signup');
 
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            const user = users.find(user => user.email === email && user.password === password);
+//     // Simple signup logic
+//     if (signupForm) {
+//         signupForm.addEventListener('submit', function (event) {
+//             event.preventDefault();
+//             const username = signupForm.querySelector('#username').value;
+//             const email = signupForm.querySelector('#email').value;
+//             const password = signupForm.querySelector('#password').value;
 
-            if (user) {
-                alert('Login successful!');
-                // Set user session or token here
-                window.location.href = 'index.html';
-            } else {
-                alert('Invalid email or password!');
-            }
-        });
-    }
-});
+//             const users = JSON.parse(localStorage.getItem('users')) || [];
+//             const userExists = users.some(user => user.email === email);
+
+//             if (userExists) {
+//                 alert('User already exists!');
+//             } else {
+//                 users.push({ username, email, password });
+//                 localStorage.setItem('users', JSON.stringify(users));
+//                 alert('Signup successful!');
+//                 window.location.href = 'login.html'; // Redirect to login page after signup
+//             }
+//         });
+//     }
+
+//     // Simple login logic
+//     if (loginForm) {
+//         loginForm.addEventListener('submit', function (event) {
+//             event.preventDefault();
+//             const email = loginForm.querySelector('#email').value;
+//             const password = loginForm.querySelector('#password').value;
+
+//             const users = JSON.parse(localStorage.getItem('users')) || [];
+//             const user = users.find(user => user.email === email && user.password === password);
+
+//             if (user) {
+//                 alert('Login successful!');
+//                 // Set user session or token here
+//                 window.location.href = 'index.html'; // Redirect to the main page after login
+//             } else {
+//                 alert('Invalid email or password!');
+//             }
+//         });
+//     }
+// });
 
 
-//
+// //

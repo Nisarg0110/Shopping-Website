@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const oki = new mongoose.Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
     email: {
         type: String,
         required: true,
@@ -17,6 +12,6 @@ const oki = new mongoose.Schema({
     },
 })
 
-const Registers = new mongoose.model("Registers", oki)
+const Login = new mongoose.model("Login", oki)
 
-module.exports = Registers;
+module.exports = Login;
